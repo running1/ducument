@@ -1,14 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IBDP 中文BSL 节日与习俗教学配套</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      background-color: #fff;
+      color: #111;
+
+    }
+
+    /* 顶部导航栏 */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .navbar .nav-right {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .hero {
+      position: relative;
+      height: 50vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #000;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      /* background: url('festival.jpg') no-repeat center center / cover; */
+      background: url("component/lesson-plan/IMG_8326.jpeg") no-repeat center center / cover;
+
+      opacity: 0.3; /* 背景图透明度 */
+      z-index: 0;
+    }
+
+    .hero h1 {
+        position: relative;
+    z-index: 1;
+    font-size: 3em;
+    background: #fff;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    padding: 25px 3px;
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    border-bottom: 10px solid #fcd62a;
+}
+
+   
+
+    .yellow-strip {
+      background-color: #fcd62a;
+      text-align: center;
+      padding: 30px 20px;
+      display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center;
+    }
+
+    .yellow-strip div {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 17px;
+      line-height: 1.8;
+      text-align: left;
+
+    }
+
+    /* 三个方块模块 */
+    .card-section {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 350px;
+      height: 350px;
+      border: 1px dashed #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .card-title {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 12px;
+      font-size: 32px;
+    }
+
+    /* 资源区域 */
+    .resources {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 17px;
+    }
+
+    .resources h3 {
+      margin-bottom: 20px;
+    }
+
+    .resources-columns {
+      display: flex;
+      justify-content: center;
+      gap: 150px;
+      flex-wrap: wrap;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .resources-columns ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    .resources-columns ul li {
+      line-height: 32px;
+    }
+    .resources-columns a{
+        text-decoration: none;
+        color: #000;
+    }
+
+    /* 页脚 */
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #555;
+    }
+    .home_page{
+        padding: 5px 10px;
+    background: black;
+    color: #fff;
+    font-size:16px;
+    }
+     /* 下拉菜单样式 */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-title {
+    cursor: pointer;
+    padding: 10px 15px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 200px;
+    /* text-align: center; */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border: 1px solid #ddd;
+    right: -50px;
+  }
+
+  .dropdown-content a {
+    color: black;
+    /* width: 50px; */
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-title {
+    background-color: #ddd;
+  }
+  </style>
 </head>
 <body>
-    <div>
-        Hello World
+
+  <!-- 顶部导航 -->
+  <!-- <div class="navbar">
+    <div class="logo">课程名称</div>
+    <div class="nav-right">
+      <div class="home_page">首页</div>
     </div>
-    <div><a href="./component/table.html">Click</a></div>
+  </div> -->
+  <!-- 顶部导航 -->
+<div class="navbar">
+    <div class="logo">课程名称</div>
+    <div class="nav-right">
+      <!-- <div class="home_page">首页</div> -->
+      <div class="dropdown">
+        <div class="home_page">首页</div>
+        <div class="dropdown-content">
+          <a href="./component/unit-plan.html">Unit Plan</a>
+          <a href="./component/unit-flow.html">Unit Flow</a>
+        </div>
+      </div>
+      <!-- <div class="dropdown">
+        <div class="dropdown-title">教学工具</div>
+        <div class="dropdown-content">
+          <a href="#">Canva</a>
+          <a href="#">Padlet</a>
+          <a href="#">更多工具</a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- 横幅区域 -->
+  <div class="hero">
+    <h1>IBDP 中文BSL节日与习俗教学配套</h1>
+  </div>
+
+  <!-- 黄色介绍条 -->
+  <div class="yellow-strip">
+    <div><strong>课程概览</strong><br>课程的学习目标是什么？填写课程说明，让学生了解本学期的学习计划。您可以在下方添加前几届学生、教室或课程项目的图片。</div>
+  </div>
+
+  <!-- 三个卡片区 -->
+  <div class="card-section">
+    <div>
+      <div class="card">图像</div>
+      <div class="card-title">适用人群-P1</div>
+    </div>
+    <div>
+      <div class="card">图像</div>
+      <div class="card-title">IBDP中文B的特点-P2</div>
+    </div>
+    <div>
+      <div class="card">图像</div>
+      <div class="card-title">融合差异化教学</div>
+    </div>
+  </div>
+
+  <!-- 资源列表 -->
+  <div class="resources">
+    <div style="    margin: 30px 31%;text-align: left;"><h3>资源</h3>
+        <p>IBDP中文BSL节日与习俗单元完整资源</p>
+    </div>
+    <div class="resources-columns">
+      <div>
+        <p><strong>单元设计</strong></p>
+        <ul>
+          <li><a href="./component/unit-plan.html">Unit plan</a></li>
+          <li><a href="./component/unit-flow.html">Unit flow</a></li>
+        </ul>
+      </div>
+      <div>
+        <p><strong>教学材料</strong></p>
+        <ul>
+          <li>[重阳节] - [<a href="#">重阳节教学材料（简体）</a>] - <br>[PPT] - [worksheet]</li>
+          <li>[春节] - [<a href="#">春节课文简体版</a>] - <br>[<a href="#">春节听力材料简体版</a>] - <br>[PPT] - [worksheet]</li>
+          <li>[中秋节] - [<a href="#">嫦娥奔月故事练习</a>] -<br> [<a href="#">中秋节听力材料-简体版</a>] - <br>[<a href="#">异乡过节也很幸福-简体</a>] - <br>[PPT] - [worksheet]</li>
+        </ul>
+      </div>
+      <div>
+        <p><strong>教学工具</strong></p>
+        <ul>
+          <li>canva</li>
+          <li>padlet</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <footer>
+    SkyeSun |  sjchen129@163.com  |  +86 18656092231
+  </footer>
+
 </body>
 </html>
