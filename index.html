@@ -139,8 +139,11 @@
       flex-wrap: wrap;
       text-align: left;
       font-size: 16px;
+      margin-left: 80px;
     }
-
+    .resources-columns div{
+        width: 200px;
+    }
     .resources-columns ul {
       list-style-type: square;
       padding-left: 20px;
@@ -215,6 +218,49 @@
   .dropdown:hover .dropdown-title {
     background-color: #ddd;
   }
+  .folder {
+      /* margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: white;
+      overflow: hidden; */
+    }
+
+    .folder-header {
+      /* background-color: #eee;
+      padding: 10px; */
+      cursor: pointer;
+      /* font-weight: bold; */
+    }
+
+    .folder-content {
+      display: none;
+      padding: 10px 20px;
+      background: #fff;
+    }
+
+   .folder ul {
+      /* list-style-type: none; */
+      padding-left: 20px;
+      margin: 5px 0;
+    }
+
+    .folder li {
+      margin: 5px 0;
+    }
+
+    .sub-header {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .arrow {
+      font-size: 10px;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    .open .arrow {
+      transform: rotate(90deg);
+    }
   </style>
 </head>
 <body>
@@ -290,7 +336,71 @@
       </div>
       <div>
         <p><strong>教学材料</strong></p>
-        <ul>
+        
+        <div class="folder">
+          <div class="folder-header" onclick="toggleFolder(this)"><span class="arrow">▶</span> 重阳节</div>
+          <div class="folder-content">
+            <div class="sub-header">【课文】</div>
+            <ul>
+              <li><a href="./component/teach-materials/double-ninth-festival.html">重阳节教学材料（简体）</a></li>
+            </ul>
+            <div class="sub-header">【PPT】</div>
+            <ul>
+              <li>重阳节课件</li>
+            </ul>
+            <div class="sub-header">【worksheet】</div>
+            <ul>
+              <li><a href="./component/teach-materials/seven.html">节日习俗介绍分类表格</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <!-- 春节 -->
+        <div class="folder">
+          <div class="folder-header" onclick="toggleFolder(this)"><span class="arrow">▶</span> 春节</div>
+          <div class="folder-content">
+            <div class="sub-header">【课文】</div>
+            <ul>
+              <li><a href="./component/teach-materials/four.html">春节课文简体版</a></li>
+              <li> <a href="./component/teach-materials/one.html">春节听力材料简体版</a></li>
+            </ul>
+            <div class="sub-header">【PPT】</div>
+            <ul>
+              <li>春节课件</li>
+            </ul>
+            <div class="sub-header">【worksheet】</div>
+            <ul>
+              <li>
+                <a href="./component/teach-materials/six.html">春节习俗变化思维导图</a>
+              </li>
+              <li>
+                <a href="./component/teach-materials/festival-customs.html">春节九宫格-sample</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 中秋节 -->
+        <div class="folder">
+          <div class="folder-header" onclick="toggleFolder(this)"><span class="arrow">▶</span> 中秋节</div>
+          <div class="folder-content">
+            <div class="sub-header">【课文】</div>
+            <ul>
+              <li><a href="./component/teach-materials/three.html">嫦娥奔月故事练习</a></li>
+              <li> <a href="./component/teach-materials/two.html">中秋节听力材料-简体版</a></li>
+              <li><a href="./component/teach-materials/five.html">异乡过节也很幸福-简体</a></li>
+            </ul>
+            <div class="sub-header">【PPT】</div>
+            <ul>
+              <li>中秋节课件</li>
+            </ul>
+            <div class="sub-header">【worksheet】</div>
+            <ul>
+              <li><a href="./component/teach-materials/three.html">嫦娥奔月故事练习</a></li>
+              <li> <a href="./component/teach-materials/two.html">中秋节听力材料-简体版</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- <ul>
           <li>【重阳节】
             <ul>
               <li>【课文】
@@ -344,9 +454,7 @@
               </li>
             </ul>
           </li>
-          <!-- <li>【春节】 - 【课文】[<a href="./component/teach-materials/four.html">春节课文简体版</a>] - <br>[<a href="./component/teach-materials/one.html">春节听力材料简体版</a>] - <br>【PPT】 - 【worksheet】</li> -->
-          <!-- <li>【中秋节】 - 【课文】[<a href="./component/teach-materials/three.html">嫦娥奔月故事练习</a>] -<br> [<a href="./component/teach-materials/two.html">中秋节听力材料-简体版</a>] - <br>[<a href="./component/teach-materials/five.html">异乡过节也很幸福-简体</a>] - <br>【PPT】 - 【worksheet】</li> -->
-        </ul>
+       </ul> -->
       </div>
       <div>
         <p><strong>教学工具</strong></p>
@@ -362,6 +470,19 @@
   <footer>
     SkyeSun |  sjchen129@163.com  |  +86 18656092231
   </footer>
-
+  <script>
+    function toggleFolder(header) {
+      const content = header.nextElementSibling;
+      const folder = header.parentElement;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        folder.classList.remove('open');
+      } else {
+        content.style.display = "block";
+        folder.classList.add('open');
+      }
+    }
+  </script>
 </body>
 </html>
+
