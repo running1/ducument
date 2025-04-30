@@ -56,7 +56,7 @@
       position: absolute;
       inset: 0;
       /* background: url('festival.jpg') no-repeat center center / cover; */
-      background: url("component/lesson-plan/IMG_8326.jpeg") no-repeat center center / cover;
+      background: url("component/lesson-plan/bg_img.jpg") no-repeat center center / cover;
 
       opacity: 0.3; /* 背景图透明度 */
       z-index: 0;
@@ -104,9 +104,8 @@
     }
 
     .card {
-      width: 350px;
-      height: 350px;
-      border: 1px dashed #ccc;
+      width: 400px;
+      height: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -153,7 +152,8 @@
     }
     .resources-columns a{
         text-decoration: none;
-        color: #000;
+        color: #1677ff;
+
     }
 
     /* 页脚 */
@@ -230,6 +230,8 @@
       /* background-color: #eee;
       padding: 10px; */
       cursor: pointer;
+      color: #1677ff;
+      line-height: 30px;
       /* font-weight: bold; */
     }
 
@@ -260,6 +262,11 @@
     }
     .open .arrow {
       transform: rotate(90deg);
+    }
+    .card img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   </style>
 </head>
@@ -308,22 +315,22 @@
   <!-- 三个卡片区 -->
   <div class="card-section">
     <div>
-      <div class="card">图像</div>
-      <div class="card-title">适用人群-P1-2</div>
+      <div class="card"><img src="./component/teach-materials/p1.jpg" alt=""></div>
+      <div class="card-title">适用人群-P1</div>
     </div>
     <div>
-      <div class="card">图像</div>
+      <div class="card"><img src="./component/teach-materials/p2.jpg" alt=""></div>
       <div class="card-title">IBDP中文B的特点-P2</div>
     </div>
     <div>
-      <div class="card">图像</div>
+      <div class="card"><img src="./component/teach-materials/p3.jpg" alt=""></div>
       <div class="card-title">融合差异化教学</div>
     </div>
   </div>
 
   <!-- 资源列表 -->
   <div class="resources">
-    <div style="    margin: 30px 31%;text-align: left;"><h3>资源</h3>
+    <div style="    margin: 30px 26%;text-align: left;"><h3>资源</h3>
         <p>IBDP中文BSL节日与习俗单元完整资源</p>
     </div>
     <div class="resources-columns">
@@ -344,10 +351,6 @@
             <ul>
               <li><a href="./component/teach-materials/double-ninth-festival.html">重阳节教学材料（简体）</a></li>
             </ul>
-            <div class="sub-header">【PPT】</div>
-            <ul>
-              <li>重阳节课件</li>
-            </ul>
             <div class="sub-header">【worksheet】</div>
             <ul>
               <li><a href="./component/teach-materials/seven.html">节日习俗介绍分类表格</a></li>
@@ -363,10 +366,6 @@
             <ul>
               <li><a href="./component/teach-materials/four.html">春节课文简体版</a></li>
               <li> <a href="./component/teach-materials/one.html">春节听力材料简体版</a></li>
-            </ul>
-            <div class="sub-header">【PPT】</div>
-            <ul>
-              <li>春节课件</li>
             </ul>
             <div class="sub-header">【worksheet】</div>
             <ul>
@@ -388,10 +387,6 @@
               <li><a href="./component/teach-materials/three.html">嫦娥奔月故事练习</a></li>
               <li> <a href="./component/teach-materials/two.html">中秋节听力材料-简体版</a></li>
               <li><a href="./component/teach-materials/five.html">异乡过节也很幸福-简体</a></li>
-            </ul>
-            <div class="sub-header">【PPT】</div>
-            <ul>
-              <li>中秋节课件</li>
             </ul>
             <div class="sub-header">【worksheet】</div>
             <ul>
